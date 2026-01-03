@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills - My Webpage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Resources/Rlogo.jpg" type="image/x-icon" />
+    <script>
+      // Apply theme immediately to prevent flash
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-mode');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="nav-bar">
+      <nav>
+        <a href="index.html" class="logo-link">
+          <span class="portfolio">Portfolio</span>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="aboutme.html">About me</a></li>
+          <li><a href="skills.html" class="active">Skills</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle dark mode"
+            >
+              🌙
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section id="skills">
+      <div class="skills">
+        <h2>My Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-icons">
+        <a
+          href="https://www.facebook.com/ghalerajesh2005"
+          target="_blank"
+          aria-label="Facebook"
+        >
+          <img src="./Resources/facebook.png" alt="Facebook" />
+        </a>
+        <a
+          href="https://www.instagram.com/rjs_ghalee/"
+          target="_blank"
+          aria-label="Instagram"
+        >
+          <img src="./Resources/instagram.png" alt="Instagram" />
+        </a>
+        <a
+          href="https://github.com/rajeshghale"
+          target="_blank"
+          aria-label="GitHub"
+        >
+          <img src="./Resources/github.png" alt="GitHub" />
+        </a>
+        <a
+          href="mailto:ghalerajesh01234@gmail.com"
+          target="_blank"
+          aria-label="Gmail"
+        >
+          <img src="./Resources/gmail.png" alt="Gmail" />
+        </a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
