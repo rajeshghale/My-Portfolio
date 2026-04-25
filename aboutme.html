@@ -1,83 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - My Webpage</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="Resources/Rlogo.jpg" type="image/x-icon" />
-    <script>
-      // Apply theme immediately to prevent flash
-      (function() {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark-mode');
-        }
-      })();
-    </script>
-  </head>
-  <body>
-    <div class="nav-bar">
-      <nav>
-        <a href="index.html" class="logo-link">
-          <span class="portfolio">Portfolio</span>
-        </a>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html" class="active">About me</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
-        </ul>
-      </nav>
-    </div>
 
-    <div class="about-content">
-      <h1>About Me</h1>
-      <div class="about-section">
-        <p>
-          Hi! I'm Rajesh Ghale, a passionate tech student exploring the world of web development
-          and programming. I love creating interactive and user-friendly websites.
-        </p>
-        <p>
-          Currently studying at Camad 3rd Semester, I'm constantly learning new technologies
-          and improving my skills in web development, design, and software engineering.
-        </p>
-      </div>
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - My Webpage</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="Resources/Rlogo.jpg" type="image/x-icon" />
+  <script>
+    // Apply theme immediately to prevent flash
+    (function () {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
+  </script>
+</head>
 
-    <footer>
-      <div class="footer-icons">
-        <a
-          href="https://www.facebook.com/ghalerajesh2005"
-          target="_blank"
-          aria-label="Facebook"
-        >
-          <img src="./Resources/facebook.png" alt="Facebook" />
-        </a>
-        <a
-          href="https://www.instagram.com/rjs_ghalee/"
-          target="_blank"
-          aria-label="Instagram"
-        >
-          <img src="./Resources/instagram.png" alt="Instagram" />
-        </a>
-        <a
-          href="https://github.com/rajeshghale"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <img src="./Resources/github.png" alt="GitHub" />
-        </a>
-        <a
-          href="mailto:ghalerajesh01234@gmail.com"
-          target="_blank"
-          aria-label="Gmail"
-        >
-          <img src="./Resources/gmail.png" alt="Gmail" />
-        </a>
-      </div>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+<body>
+  <div class="nav-bar">
+    <nav>
+      <a href="index.html" class="logo-link">
+        <span class="portfolio">Portfolio</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html" class="active">About me</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="about-content">
+    <h1>About Me</h1>
+    <div class="about-section">
+      <p>
+        Hi, I'm a passionate and driven Computer Applications student currently pursuing my BCA (Bachelor of Computer
+        Applications) at Camad College under Pokhara University. Born on July 10, 2005, I am a young and enthusiastic
+        learner with a keen interest in technology and software development. From an early age, I have been fascinated
+        by how technology shapes the modern world, which inspired me to pursue a career in the field of computing.
+        Through my academic journey, I am continuously building my skills in programming, problem-solving, and digital
+        innovation. I believe in the power of learning by doing, and I am always eager to take on new challenges, work
+        on meaningful projects, and grow as a future tech professional. This portfolio is a reflection of my dedication,
+        creativity, and the progress I make every step of the way.
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/ghalerajesh2005" target="_blank" aria-label="Facebook">
+        <img src="./Resources/facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.instagram.com/rjs_ghalee/" target="_blank" aria-label="Instagram">
+        <img src="./Resources/instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://github.com/rajeshghale" target="_blank" aria-label="GitHub">
+        <img src="./Resources/github.png" alt="GitHub" />
+      </a>
+      <a href="mailto:ghalerajesh01234@gmail.com" target="_blank" aria-label="Gmail">
+        <img src="./Resources/gmail.png" alt="Gmail" />
+      </a>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
