@@ -1,120 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RAJESH GHALE</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="Resources/Rlogo.jpg" type="image/x-icon" />
+    <title>Rajesh Ghale | Software Developer</title>
+    <meta name="description" content="Rajesh Ghale is a BCA student and aspiring software developer passionate about building web applications." />
+    <meta property="og:title" content="Rajesh Ghale | Software Developer" />
+    <meta property="og:description" content="Rajesh Ghale is a BCA student and aspiring software developer passionate about building web applications." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Rajesh Ghale | Software Developer" />
+    <meta name="twitter:description" content="Rajesh Ghale is a BCA student and aspiring software developer passionate about building web applications." />
+    <link rel="shortcut icon" href="/Rlogo.jpg" type="image/x-icon" />
     <script>
       // Apply theme immediately to prevent flash
       (function() {
-        const theme = localStorage.getItem('theme');
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark-mode');
-        }
+        const theme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', theme);
       })();
     </script>
   </head>
   <body>
-    <div class="nav-bar">
-      <nav>
-        <a href="index.html" class="logo-link">
-          <span class="portfolio">Portfolio</span>
-        </a>
-        <ul class="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html">About me</a></li>
-          <li><a href="skills.html">Skills</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="my-intro">
-      <div class="intro-text">
-        <p>Hello!</p>
-        <h2>I am <span class="name">Rajesh Ghale</span></h2>
-        <h3>
-          <span class="typing-text"></span><span class="cursor">|</span>
-        </h3>
-        <p class="tagline">Turning ideas into code, one line at a time.</p>
-        <div class="cta-buttons">
-          <a href="aboutme.html" class="btn btn-primary">View My Work</a>
-          <a href="./Resources/myCV.pdf" class="btn btn-secondary" target="_blank">Download CV</a>
-        </div>
-      </div>
-      <div class="profile-container">
-        <img src="./Resources/mePic.jpg" alt="Rajesh Ghale" class="profile-pic" />
-      </div>
-    </div>
-
-    <!-- Stats Section -->
-    <section class="stats-section fade-in-on-scroll">
-      <div class="stats-container">
-        <div class="stat-item">
-          <h4>5</h4>
-          <p>Projects Done</p>
-        </div>
-        <div class="stat-item">
-          <h4>10+</h4>
-          <p>Skills</p>
-        </div>
-        <div class="stat-item">
-          <h4>2023</h4>
-          <p>Year Started</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Preview -->
-    <section class="skills-preview fade-in-on-scroll">
-      <h3>Skills Preview</h3>
-      <div class="skill-badges">
-        <span class="skill-badge">HTML</span>
-        <span class="skill-badge">CSS</span>
-        <span class="skill-badge">JavaScript</span>
-        <span class="skill-badge">React</span>
-        <span class="skill-badge">Python</span>
-        <span class="skill-badge">Web Dev</span>
-      </div>
-      <a href="skills.html" class="view-all-skills">View All Skills →</a>
-    </section>
-
-
-
-    <footer>
-      <div class="footer-icons">
-        <a
-          href="https://www.facebook.com/ghalerajesh2005"
-          target="_blank"
-          aria-label="Facebook"
-        >
-          <img src="./Resources/facebook.png" alt="Facebook" />
-        </a>
-        <a
-          href="https://www.instagram.com/rjs_ghalee/"
-          target="_blank"
-          aria-label="Instagram"
-        >
-          <img src="./Resources/instagram.png" alt="Instagram" />
-        </a>
-        <a
-          href="https://github.com/rajeshghale"
-          target="_blank"
-          aria-label="GitHub"
-        >
-          <img src="./Resources/github.png" alt="GitHub" />
-        </a>
-        <a
-          href="mailto:ghalerajesh01234@gmail.com"
-          target="_blank"
-          aria-label="Gmail"
-        >
-          <img src="./Resources/gmail.png" alt="Gmail" />
-        </a>
-      </div>
-    </footer>
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
