@@ -1,44 +1,56 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
-export default function Services({ scrolledY }) {
-  const speed = 0.1;
-  const translation1 = scrolledY * speed * -1;
-  const translation2 = scrolledY * speed * 1;
-
+export default function Services() {
   return (
     <section className="services reveal visible" id="services">
-      {/* Desktop marquee */}
+      {/* Desktop marquee — pure CSS, zero JS, zero jitter */}
       <div className="services__desktop">
-        <div 
-          className="services__row" 
-          style={{ transform: `translateX(${translation1}px)` }}
-        >
-          <span className="services__heading">Web Dev</span>
-          <span className="services__ampersand">&amp;</span>
-          <span className="services__heading">App Dev</span>
-          <div className="services__list">
-            <span className="services__list-label">Services</span>
-            <div className="services__list-divider"></div>
-            <span className="services__list-item">Frontend Development</span>
-            <span className="services__list-item">Backend Systems</span>
-            <span className="services__list-item">Responsive Design</span>
-            <span className="services__list-item">API Integration</span>
+        {/* Row 1: scrolls left */}
+        <div className="services__marquee-track services__marquee-track--left">
+          <div className="services__marquee-content">
+            <span className="services__heading">Web Dev</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">App Dev</span>
+            <span className="services__ampersand">·</span>
+            <span className="services__heading">Web Dev</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">App Dev</span>
+            <span className="services__ampersand">·</span>
+          </div>
+          {/* Duplicate for seamless loop */}
+          <div className="services__marquee-content" aria-hidden="true">
+            <span className="services__heading">Web Dev</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">App Dev</span>
+            <span className="services__ampersand">·</span>
+            <span className="services__heading">Web Dev</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">App Dev</span>
+            <span className="services__ampersand">·</span>
           </div>
         </div>
-        <div 
-          className="services__row" 
-          style={{ transform: `translateX(${translation2}px)` }}
-        >
-          <span className="services__heading">UI</span>
-          <span className="services__ampersand">&amp;</span>
-          <span className="services__heading">Systems</span>
-          <div className="services__list" style={{ textAlign: 'right' }}>
-            <span className="services__list-label" style={{ textAlign: 'right' }}>Focus</span>
-            <div className="services__list-divider" style={{ marginLeft: 'auto' }}></div>
-            <span className="services__list-item">Performance</span>
-            <span className="services__list-item">Accessibility</span>
-            <span className="services__list-item">Clean UI</span>
-            <span className="services__list-item">Great UX</span>
+
+        {/* Row 2: scrolls right */}
+        <div className="services__marquee-track services__marquee-track--right">
+          <div className="services__marquee-content">
+            <span className="services__heading">UI</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">Systems</span>
+            <span className="services__ampersand">·</span>
+            <span className="services__heading">UI</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">Systems</span>
+            <span className="services__ampersand">·</span>
+          </div>
+          <div className="services__marquee-content" aria-hidden="true">
+            <span className="services__heading">UI</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">Systems</span>
+            <span className="services__ampersand">·</span>
+            <span className="services__heading">UI</span>
+            <span className="services__ampersand">&amp;</span>
+            <span className="services__heading">Systems</span>
+            <span className="services__ampersand">·</span>
           </div>
         </div>
       </div>

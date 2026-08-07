@@ -1,38 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function Hero() {
-  const roles = ['BCA Student', 'Web Developer', 'Problem Solver'];
-  const [roleIndex, setRoleIndex] = useState(0);
-  const [displayText, setDisplayText] = useState('');
-  const [isDeleting, setIsDeleting] = useState(false);
+  const typewriterRef = useRef(null);
 
+  // Typewriter: directly mutates DOM span — zero React re-renders
   useEffect(() => {
+    const roles = ['BCA Student', 'Web Developer', 'Problem Solver'];
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
     let timer;
-    const currentRole = roles[roleIndex];
 
-    const type = () => {
+    const tick = () => {
+      const current = roles[roleIndex];
+      if (typewriterRef.current) {
+        typewriterRef.current.textContent = current.substring(0, charIndex);
+      }
+
       if (!isDeleting) {
-        setDisplayText((prev) => currentRole.substring(0, prev.length + 1));
-        if (displayText === currentRole) {
-          timer = setTimeout(() => setIsDeleting(true), 1500);
-        } else {
-          timer = setTimeout(type, 100);
+        charIndex++;
+        if (charIndex > current.length) {
+          isDeleting = true;
+          timer = setTimeout(tick, 1500);
+          return;
         }
+        timer = setTimeout(tick, 100);
       } else {
-        setDisplayText((prev) => currentRole.substring(0, prev.length - 1));
-        if (displayText === '') {
-          setIsDeleting(false);
-          setRoleIndex((prev) => (prev + 1) % roles.length);
-          timer = setTimeout(type, 500);
-        } else {
-          timer = setTimeout(type, 50);
+        charIndex--;
+        if (charIndex < 0) {
+          isDeleting = false;
+          charIndex = 0;
+          roleIndex = (roleIndex + 1) % roles.length;
+          timer = setTimeout(tick, 500);
+          return;
         }
+        timer = setTimeout(tick, 50);
       }
     };
 
-    timer = setTimeout(type, isDeleting ? 50 : 100);
+    timer = setTimeout(tick, 600);
     return () => clearTimeout(timer);
-  }, [displayText, isDeleting, roleIndex]);
+  }, []);
 
   const handleSelectedWorkClick = (e) => {
     e.preventDefault();
@@ -62,7 +70,7 @@ export default function Hero() {
           <div className="hero__mobile-anim">
             <h1 className="hero__heading">Software<br />Developer</h1>
             <div style={{ marginTop: '0.5rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '14px', color: 'var(--foreground)' }}>
-              I am a <span style={{ color: 'var(--accent)', fontWeight: 'bold' }}>{displayText}</span><span className="cursor">|</span>
+              I am a <span ref={typewriterRef} style={{ color: 'var(--accent)', fontWeight: 'bold' }}></span><span className="cursor">|</span>
             </div>
           </div>
 
