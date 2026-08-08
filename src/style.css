@@ -3,7 +3,7 @@
    Inspired by romancaseres.cloud
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -24,8 +24,9 @@
   --emerald: #059669;
 
   /* Typography */
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   /* Spacing */
   --app-header-h: 64px;
@@ -64,6 +65,14 @@ body {
   overflow-x: hidden;
   transition: background-color var(--duration-normal) ease,
               color var(--duration-normal) ease;
+}
+
+h1,
+h2,
+h3,
+.hero__name,
+.services__heading {
+  font-family: var(--font-display);
 }
 
 /* Keep the aurora layer visible behind every portfolio section. */
@@ -615,9 +624,9 @@ button {
 /* Hero arrow + location */
 .hero__arrow-block {
   display: grid;
-  grid-template-columns: 2fr 10fr;
-  gap: 1rem;
-  align-items: start;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: center;
   margin-top: 1.5rem;
 }
 
@@ -635,6 +644,7 @@ button {
   letter-spacing: 0.28em;
   color: color-mix(in srgb, var(--foreground) 70%, transparent);
   line-height: 1.6;
+  text-align: left;
 }
 
 .hero__credit {
@@ -817,7 +827,7 @@ button {
 }
 
 .services__heading {
-  font-size: clamp(6rem, 12vw, 14rem);
+  font-size: clamp(5rem, 10vw, 12rem);
   font-weight: 900;
   text-transform: uppercase;
   line-height: 0.9;

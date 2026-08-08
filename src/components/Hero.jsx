@@ -75,7 +75,6 @@ export default function Hero() {
 
           <div className="hero__mobile-anim">
             <div className="hero__arrow-block">
-              <div className="hero__arrow"><span aria-hidden="true">-&gt;</span></div>
               <div className="hero__location">
                 I based in<br />Kathmandu,<br />Passionate in code & design
               </div>
@@ -134,13 +133,12 @@ export default function Hero() {
                   </div>
 
                   <div className="hero__arrow-block" style={{ marginTop: '1.5rem' }}>
-                    <div className="hero__arrow"><span aria-hidden="true">-&gt;</span></div>
                     <div className="hero__location">
                       I based in<br />Kathmandu,<br />Passionate in code & design
                     </div>
                   </div>
 
-                  <div className="hero__credit">Design & code by Rajesh</div>
+                  <div className="hero__credit">Scroll down for more details</div>
                 </div>
               </div>
             </div>
