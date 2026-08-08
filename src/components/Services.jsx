@@ -67,26 +67,14 @@ export default function Services() {
           <div className="services__mobile-heading">App Dev</div>
         </div>
         <div className="services__mobile-list">
-          <span className="services__mobile-list-label">Expertise</span>
+          <span className="services__mobile-list-label">Also available</span>
           <div className="services__mobile-list-item">
             <div className="services__mobile-list-dot"></div>
-            <span className="services__mobile-list-text">Frontend Development</span>
+            <span className="services__mobile-list-text">UI</span>
           </div>
           <div className="services__mobile-list-item">
             <div className="services__mobile-list-dot"></div>
-            <span className="services__mobile-list-text">Backend Systems</span>
-          </div>
-          <div className="services__mobile-list-item">
-            <div className="services__mobile-list-dot"></div>
-            <span className="services__mobile-list-text">Responsive Design</span>
-          </div>
-          <div className="services__mobile-list-item">
-            <div className="services__mobile-list-dot"></div>
-            <span className="services__mobile-list-text">API Integration</span>
-          </div>
-          <div className="services__mobile-list-item">
-            <div className="services__mobile-list-dot"></div>
-            <span className="services__mobile-list-text">Problem Solving</span>
+            <span className="services__mobile-list-text">Systems</span>
           </div>
         </div>
       </div>

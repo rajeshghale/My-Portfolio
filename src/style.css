@@ -171,12 +171,12 @@ button {
 
 .nav__logo-text {
   color: color-mix(in srgb, var(--foreground) 70%, transparent);
-  font-weight: 600;
+  font-weight: 800;
   line-height: 0.88;
   letter-spacing: -0.03em;
-  font-size: clamp(0.65rem, 3.2vw, 0.95rem);
+  font-size: clamp(0.85rem, 4vw, 1.4rem);
   white-space: nowrap;
-  overflow: hidden;
+  overflow: visible;
   text-overflow: ellipsis;
 }
 
@@ -208,6 +208,17 @@ button {
 .nav__btn:hover {
   border-color: color-mix(in srgb, var(--foreground) 20%, transparent);
   background-color: var(--muted);
+}
+
+.nav__github-btn {
+  background-color: #24292f;
+  border-color: #24292f;
+  color: #fff;
+}
+
+.nav__github-btn:hover {
+  background-color: #0d1117;
+  border-color: #0d1117;
 }
 
 .nav__btn-icon {
@@ -1586,7 +1597,7 @@ button {
   }
 
   .nav__logo-text {
-    font-size: clamp(0.72rem, 1.35vw, 0.95rem);
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   }
 
   .nav__actions {

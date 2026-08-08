@@ -1,47 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 export default function Hero() {
-  const typewriterRef = useRef(null);
-
-  // Typewriter: directly mutates DOM span — zero React re-renders
-  useEffect(() => {
-    const roles = ['BCA Student', 'Web Developer', 'Problem Solver'];
-    let roleIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
-    let timer;
-
-    const tick = () => {
-      const current = roles[roleIndex];
-      if (typewriterRef.current) {
-        typewriterRef.current.textContent = current.substring(0, charIndex);
-      }
-
-      if (!isDeleting) {
-        charIndex++;
-        if (charIndex > current.length) {
-          isDeleting = true;
-          timer = setTimeout(tick, 1500);
-          return;
-        }
-        timer = setTimeout(tick, 100);
-      } else {
-        charIndex--;
-        if (charIndex < 0) {
-          isDeleting = false;
-          charIndex = 0;
-          roleIndex = (roleIndex + 1) % roles.length;
-          timer = setTimeout(tick, 500);
-          return;
-        }
-        timer = setTimeout(tick, 50);
-      }
-    };
-
-    timer = setTimeout(tick, 600);
-    return () => clearTimeout(timer);
-  }, []);
-
   const handleSelectedWorkClick = (e) => {
     e.preventDefault();
     document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
@@ -59,7 +18,7 @@ export default function Hero() {
           <div className="hero__mobile-anim" style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '1rem', alignItems: 'start' }}>
             <div>
               <div className="hero__label">01/</div>
-              <div className="hero__label-sub" style={{ marginTop: '0.5rem' }}>From Nepal with<br />Love</div>
+              <div className="hero__label-sub" style={{ marginTop: '0.5rem' }}>From Nepal</div>
             </div>
             <div className="hero__status">
               <span className="hero__status-dot"></span>
@@ -69,18 +28,14 @@ export default function Hero() {
 
           <div className="hero__mobile-anim">
             <h1 className="hero__heading">Software<br />Developer</h1>
-            <div style={{ marginTop: '0.5rem', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '14px', color: 'var(--foreground)' }}>
-              I am a <span ref={typewriterRef} style={{ color: 'var(--accent)', fontWeight: 'bold' }}></span><span className="cursor">|</span>
-            </div>
           </div>
 
           <div className="hero__mobile-anim">
             <div className="hero__tags">
               <a href="#skills-section" className="hero__tag">HTML</a>
-              <a href="#skills-section" class="hero__tag">CSS</a>
-              <a href="#skills-section" class="hero__tag">JavaScript</a>
-              <a href="#skills-section" class="hero__tag">React</a>
-              <a href="#skills-section" class="hero__tag">Python</a>
+              <a href="#skills-section" className="hero__tag">CSS</a>
+              <a href="#skills-section" className="hero__tag">JavaScript</a>
+              <a href="#contact" className="hero__tag">Web Dev</a>
             </div>
           </div>
 
@@ -100,7 +55,7 @@ export default function Hero() {
           <div className="hero__mobile-anim">
             <div style={{ textAlign: 'right' }}>
               <div className="hero__description" style={{ marginLeft: 'auto' }}>
-                <p>Building clean, modern web apps<br />for real users.</p>
+                <p>Building clean, modern web apps<br />Designing</p>
               </div>
               <div style={{ marginTop: '0.5rem', fontSize: '10px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '0.24em', color: 'color-mix(in srgb, var(--foreground) 55%, transparent)' }}>
                 Open for freelance / internships<br />Based in Kathmandu, Nepal
@@ -159,8 +114,7 @@ export default function Hero() {
                 <span className="hero__status-text">Open for work</span>
               </div>
               <div className="hero__label" style={{ textAlign: 'right' }}>
-                <div>01/</div>
-                <div className="hero__label-sub">From Nepal with<br />Love</div>
+                <div className="hero__label-sub">From Nepal</div>
               </div>
             </div>
           </div>
@@ -193,7 +147,7 @@ export default function Hero() {
 
             <div className="hero__name-block">
               <div className="hero__description">
-                <p>Building clean, modern web apps<br />for real users.</p>
+                <p>Building clean, modern web apps<br />Designing</p>
                 <div className="hero__description-sub">
                   Open for freelance / internships<br />Based in Kathmandu, Nepal
                 </div>

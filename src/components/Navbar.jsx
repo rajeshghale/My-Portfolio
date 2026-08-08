@@ -42,7 +42,7 @@ export default function Navbar({ isMenuOpen, toggleMenu }) {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              className="nav__btn"
+              className="nav__btn nav__github-btn"
               aria-label="Open GitHub repository"
               href="https://github.com/rajeshghale"
             >
