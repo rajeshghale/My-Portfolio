@@ -794,7 +794,7 @@ button {
   overflow: hidden;
 }
 
-/* Desktop marquee — pure CSS, GPU compositor, zero JS */
+/* Desktop marquee — position follows page scroll */
 .services__marquee-track {
   display: flex;
   overflow: hidden;
@@ -802,34 +802,11 @@ button {
   gap: 0;
 }
 
-.services__marquee-track--left .services__marquee-content {
-  animation: marquee-left 20s linear infinite;
-}
-
-.services__marquee-track--right .services__marquee-content {
-  animation: marquee-right 20s linear infinite;
-}
-
 .services__marquee-content {
   display: flex;
   align-items: center;
   flex-shrink: 0;
   will-change: transform;
-}
-
-@keyframes marquee-left {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-@keyframes marquee-right {
-  0%   { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
-}
-
-/* Pause on hover */
-.services__marquee-track:hover .services__marquee-content {
-  animation-play-state: paused;
 }
 
 /* Legacy — kept for fallback */
