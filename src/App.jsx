@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { Component as BackgroundGradientGlow } from './components/ui/background-gradient-glow';
+import ParticleBackground from './components/ui/particle-background';
 
 export default function App() {
   // The mobile menu is the only render-driven state.
@@ -58,7 +59,7 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <BackgroundGradientGlow />
+      <ParticleBackground />
       {/* Scroll Progress Bar — DOM-only, no state */}
       <div ref={progressRef} className="scroll-progress" style={{ transform: 'scaleX(0)' }} />
 
@@ -86,6 +87,7 @@ export default function App() {
 
       <main className="main">
         <Hero />
+
         <Services />
         <About />
         <Projects />

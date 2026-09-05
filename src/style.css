@@ -11,17 +11,17 @@
 
 /* ── Theme Variables ── */
 :root {
-  /* Colors — Light theme */
-  --background: #FDCC92;
-  --foreground: #0a0a0a;
-  --muted: #f5f5f5;
-  --muted-foreground: #737373;
-  --border: #000;
-  --ring: #0a0a0a;
+  /* Colors — Dark theme */
+  --background: #080810;
+  --foreground: #f0f0f5;
+  --muted: #1a1a2e;
+  --muted-foreground: #9090aa;
+  --border: #2a2a3a;
+  --ring: #a97cf8;
   --accent: #a97cf8;
   --accent-secondary: #f38cb8;
   --accent-tertiary: #fdcc92;
-  --emerald: #059669;
+  --emerald: #10b981;
 
   /* Typography */
   --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -58,7 +58,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: transparent;
+  background-color: var(--background);
   color: var(--foreground);
   line-height: 1.6;
   min-height: 100vh;
