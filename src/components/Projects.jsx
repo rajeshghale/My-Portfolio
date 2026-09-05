@@ -24,44 +24,7 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const projectsData = [
-    {
-      id: 1,
-      num: '01',
-      name: 'Portfolio Website',
-      desc: 'A modern, responsive portfolio website built with clean HTML, CSS, and JavaScript featuring dark mode and smooth animations.',
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      image: '/bgimage.jpg',
-      github: 'https://github.com/rajeshghale/My-Portfolio'
-    },
-    {
-      id: 2,
-      num: '02',
-      name: 'Web Application',
-      desc: 'A full-stack web application demonstrating modern development practices with responsive design and interactive features.',
-      tags: ['React', 'Node.js', 'MongoDB'],
-      image: '/bgimage.jpg',
-      github: 'https://github.com/rajeshghale'
-    },
-    {
-      id: 3,
-      num: '03',
-      name: 'Python Automation',
-      desc: 'Python scripts and automation tools for solving real-world problems, showcasing problem-solving and algorithmic thinking.',
-      tags: ['Python', 'Automation'],
-      image: '/bgimage.jpg',
-      github: 'https://github.com/rajeshghale'
-    },
-    {
-      id: 4,
-      num: '04',
-      name: 'Landing Page Design',
-      desc: 'A pixel-perfect, responsive landing page with modern CSS techniques, animations, and accessibility best practices.',
-      tags: ['HTML', 'CSS', 'UI Design'],
-      image: '/bgimage.jpg',
-      github: 'https://github.com/rajeshghale'
-    }
-  ];
+  const projectsData = [];
 
   return (
     <section className="projects" id="projects" ref={rootRef}>
